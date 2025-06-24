@@ -18,8 +18,5 @@ public class CameraMovementScript : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector2 moveDirection = new Vector2(horizontalInput, verticalInput).normalized;
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-
-
-
     }
 }
