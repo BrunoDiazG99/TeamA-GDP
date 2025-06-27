@@ -52,11 +52,11 @@ TagManager:
   - name: Objects
     uniqueID: 2170073859
     locked: 0
-  - name: Player
-    uniqueID: 3879035619
-    locked: 0
   - name: Destructible
     uniqueID: 1961824649
+    locked: 0
+  - name: Player
+    uniqueID: 3879035619
     locked: 0
   m_RenderingLayers:
   - Default
