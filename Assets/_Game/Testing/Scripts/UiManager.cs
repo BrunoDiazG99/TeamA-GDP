@@ -1,43 +1,77 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
-    public Canvas menu;
+    public Canvas menuCanvas;
+
+    public GameObject options;
+    public GameObject menu;
+
     private bool enabledMenu = false;
     private bool timeStopped = false;
 
-    InputAction openMenu;
+    InputAction openMenuInput;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        menu.SetActive(true);
+        options.SetActive(false);
+    }
+
+
     void Start()
     {
-        menu.enabled = false;
-        openMenu = InputSystem.actions.FindAction("Cancel");
+        menuCanvas.enabled = false;
+        openMenuInput = InputSystem.actions.FindAction("Cancel");
 
-        openMenu.started += TriggerMenu;
+        openMenuInput.started += TriggerMenuFromInput;
+
+        AudioManager.instance.StopSound("MenuTrack");
+        AudioManager.instance.PlaySound("MenuTrack");
 
     }
 
-    //void OnEnable()
-    //{
-        
-    //}
+    public void OpenOptions()
+    {
+        menu.SetActive(false);
+        options.SetActive(true);
+    }
 
-    private void TriggerMenu(InputAction.CallbackContext context)
+    public void ReturnFromOptions()
+    {
+        options.SetActive(false);
+        menu.SetActive(true);
+    }
+
+    public void TriggerMenu()
     {
 
-        Debug.Log("open menu");
-        Debug.Log(enabledMenu);
-        Debug.Log(timeStopped);
-
-        menu.enabled = !enabledMenu;
+        menuCanvas.enabled = !enabledMenu;
         enabledMenu = !enabledMenu;
 
         Time.timeScale = !timeStopped ? 1f : 0f;
         timeStopped = !timeStopped;
+
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
+    private void TriggerMenuFromInput(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("open menu canvas");
+        Debug.Log(enabledMenu);
+        Debug.Log(timeStopped);
+
+        TriggerMenu();
 
     }
 
