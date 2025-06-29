@@ -1157,6 +1157,11 @@ MonoBehaviour:
   bomba: {fileID: 4016581142906656384, guid: da57f23434ae0a64385689713d29009f, type: 3}
   numBombas: 0
   bombText: {fileID: 639735168}
+  health: 0
+  maxHealth: 0
+  healthIcons: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
 --- !u!1 &364496880
 GameObject:
   m_ObjectHideFlags: 0
@@ -59831,7 +59836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b825b9f8bb119044bd7fd82658435bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMap: {fileID: 0}
+  startingMap: {fileID: 60767653}
 --- !u!114 &1599475902
 MonoBehaviour:
   m_ObjectHideFlags: 0
