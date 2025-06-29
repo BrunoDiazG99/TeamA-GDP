@@ -1,6 +1,7 @@
 using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class AtaquePico : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class AtaquePico : MonoBehaviour
     public GameObject hitboxPico;
     public float tiempoGolpe = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        hitboxPico.SetActive(false);//Deactivamos la hit box
+    }
     void Start()
     {
 
@@ -16,7 +21,7 @@ public class AtaquePico : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Golpear());
         }
@@ -30,4 +35,5 @@ public class AtaquePico : MonoBehaviour
         hitboxPico.SetActive(false); //Desactivamos la hitbox del pico;
 
     }
+
 }
