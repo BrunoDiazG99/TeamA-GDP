@@ -18,13 +18,7 @@ public class EnemyAI : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
-    BoxCollider2D hitBox;
-
-    [SerializeField]
-    BoxCollider2D moveBox;
-
-    [SerializeField]
-    BoxCollider2D attackHitBox;
+    GameObject attackHitBox;
 
     NavMeshAgent agent;
 
@@ -66,7 +60,7 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         facingLeft = false;
-        attackHitBox.enabled = false;
+        attackHitBox.SetActive(false);
        
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -119,9 +113,9 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log("Attacking");
         yield return new WaitForSeconds(attackAnimationDuration);
-        attackHitBox.enabled = true;
+        attackHitBox.SetActive(true);
         yield return new WaitForSeconds(attackAnimationDuration);
-        attackHitBox.enabled = false;
+        attackHitBox.SetActive(false);
     }
 
     IEnumerator EnemyAttack()
