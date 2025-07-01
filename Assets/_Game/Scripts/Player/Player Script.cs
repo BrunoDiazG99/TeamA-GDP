@@ -30,6 +30,16 @@ public class Move : MonoBehaviour
         movementInput.y = Input.GetAxisRaw("Vertical");
 
         movementInput = movementInput.normalized;
+        //Darle animacion
+        animator.SetFloat("Horizontal", movementInput.x);
+        animator.SetFloat("Vertical", movementInput.y);
+        animator.SetFloat("SPEED", movementInput.magnitude);
+
+        if (movementInput.x != 0 || movementInput.y != 0)
+        {
+            animator.SetFloat("UltimoPosX", movementInput.x);
+            animator.SetFloat("UltimoPosY", movementInput.y);
+        }
     }
     private void FixedUpdate()
     {

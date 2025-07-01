@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7833557015146840697}
   - component: {fileID: 585094752095392834}
   - component: {fileID: 1192268978393304152}
+  - component: {fileID: 7312355984519927695}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -31,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 1533983291973910643}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.41, y: 2.17, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3553201306367358700}
@@ -82,12 +83,12 @@ SpriteRenderer:
   m_SortingLayerID: -415931677
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4903908956539934548, guid: 4087743381db77847a0ed13012d5aa0d, type: 3}
+  m_Sprite: {fileID: -3249409527701473992, guid: e069829d06d2ac1468c3c2222ae73e45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.06, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -127,8 +128,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.25, y: -1.25}
-  m_Size: {x: 1.763885, y: 1.9193662}
+  m_Offset: {x: -0.06, y: -0.31}
+  m_Size: {x: 0.5368049, y: 0.536805}
   m_Direction: 0
 --- !u!50 &5311374035113693824
 Rigidbody2D:
@@ -204,6 +205,28 @@ MonoBehaviour:
   healthIcons: []
   fullHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
+--- !u!95 &7312355984519927695
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533983291973910643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab2d47f1890b3c642895558427fcc287, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7343764757356791533
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +294,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.21644413, y: -1.740524}
+  m_Offset: {x: -0.062028587, y: -0.51483774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -281,7 +304,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5086138, y: 1.8964906}
+  m_Size: {x: 0.4740746, y: 0.8668151}
   m_EdgeRadius: 0
 --- !u!114 &4721770104665951150
 MonoBehaviour:
