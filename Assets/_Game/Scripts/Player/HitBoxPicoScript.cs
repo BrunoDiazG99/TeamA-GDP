@@ -25,8 +25,14 @@ public class HitoBoxPicoScript : MonoBehaviour
     // Using botton "Space"
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<EnemyAI>().TakeDamage();
+        }
+
         if (other.gameObject == tilempDestructible.gameObject)
         {
+            AudioManager.instance.PlaySound("sf_pickaxe");
             // Obtenemos los bounds del collider de este GameObject (la hitbox)
             Bounds bounds = GetComponent<Collider2D>().bounds;
 

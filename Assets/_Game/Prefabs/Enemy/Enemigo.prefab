@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.012466133, y: 0.14644521}
+  m_Offset: {x: 0.009850502, y: 0.067323685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.595951, y: 1.8291548}
+  m_Size: {x: 1.8191223, y: 2.6285133}
   m_EdgeRadius: 0
 --- !u!1 &5887150766051691132
 GameObject:
@@ -145,7 +145,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.005290389, y: -0.9721461}
+  m_Offset: {x: 0.031228542, y: -1.05127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.0340545, y: 1.0252761}
+  m_Size: {x: 2.4803972, y: 1.1835241}
   m_EdgeRadius: 0
 --- !u!114 &7227709786601419793
 MonoBehaviour:
@@ -183,9 +183,10 @@ GameObject:
   - component: {fileID: 8540242968092984169}
   - component: {fileID: 532706872784160210}
   - component: {fileID: 7954234762671417273}
+  - component: {fileID: -3999105219393725381}
   m_Layer: 0
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +249,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -415931677
+  m_SortingLayerID: 1961824649
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 8700586648625052212, guid: 51bcf4237e29e5d45bb7af91973b495d, type: 3}
@@ -278,9 +279,12 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7707055199527747731}
   attackHitBox: {fileID: 5887150766051691132}
   health: 2
-  followPlayerRadius: 5
-  attackCooldown: 6
-  attackAnimationDuration: 0.3
+  followPlayerRadius: 8
+  attackPlayerRadius: 4
+  attackCooldown: 5
+  attackAnimationDuration: 0.5
+  hitBoxCollider: {fileID: 5323788599398824759}
+  invulnerableTime: 1
 --- !u!50 &8540242968092984169
 Rigidbody2D:
   serializedVersion: 5
@@ -342,7 +346,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.002028942, y: -0.2678089}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -352,7 +356,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.92, y: 2.82}
+  m_Size: {x: 1.5588694, y: 1.1401253}
   m_EdgeRadius: 0
 --- !u!195 &7954234762671417273
 NavMeshAgent:
@@ -363,16 +367,113 @@ NavMeshAgent:
   m_GameObject: {fileID: 8503469773577896784}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.96
-  m_Speed: 1
-  m_Acceleration: 2
+  m_Radius: 0.5
+  m_Speed: 1.5
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2.82
+  m_Height: 1
   m_BaseOffset: 1.41
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
+--- !u!82 &-3999105219393725381
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503469773577896784}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 91c7be73354f9b046a98cce172063a13, type: 3}
+  m_Resource: {fileID: 8300000, guid: 91c7be73354f9b046a98cce172063a13, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 64
+  DopplerLevel: 1
+  MinDistance: 5
+  MaxDistance: 800
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.019355774
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

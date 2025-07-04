@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.StopSound("MenuTrack");
+        AudioManager.instance.StopSound("GameTrack");
         AudioManager.instance.PlaySound("MenuTrack");
     }
 

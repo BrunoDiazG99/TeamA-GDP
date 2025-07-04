@@ -1,6 +1,8 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class PlayerInfoManager : MonoBehaviour
@@ -26,17 +28,25 @@ public class PlayerInfoManager : MonoBehaviour
     Sprite fullHeart;
     [SerializeField]
     Sprite emptyHeart;
+    [SerializeField]
+    float invulnerableTime;
+    BoxCollider2D hitBoxCollider;
 
     private void Awake()
     {
+        hitBoxCollider = gameObject.GetComponent<BoxCollider2D>();
+        GameObject vidaInCanvas = GameObject.FindGameObjectWithTag("PlayerHealth").gameObject;
+        healthIcons  = vidaInCanvas.GetComponentsInChildren<Image>();
 
     }
 
     void Start()
     {
+
         placeBombAction = InputSystem.actions.FindAction("Interact");
 
         GameEvents.current.onBombPickup += BombPickedUp;
+        GameEvents.current.onHeartPickup += HeartPickup;
         GameEvents.current.onEnemyDamage += TakeDamage;
     }
 
@@ -47,6 +57,17 @@ public class PlayerInfoManager : MonoBehaviour
             Debug.Log("E pressed");
             PlaceBomb();
         }
+    }
+
+    public bool HasFullHealth()
+    {
+        return health >= maxHealth;
+    }
+
+    void HeartPickup()
+    {
+        health += 1;
+        UpdateHealth();
     }
 
     void UpdateHealth()
@@ -68,17 +89,40 @@ public class PlayerInfoManager : MonoBehaviour
             i++;
         }
     }
+    private void ActivateHearts(int maxHealth)
+    {
+        int i = 1;
+        foreach (Image healthSlot in healthIcons)
+        {
+            if (i <= maxHealth)
+            {
+                healthSlot.enabled = true;
+            }
+            i++;
+        }
+    }
 
     void TakeDamage()
     {
+
+        AudioManager.instance.PlaySound("sf_damage");
         health -= 1;
         UpdateHealth();
         if (health == 0)
         {
             // game over
             Debug.Log("Game should end");
+            GameEvents.current.GameOver();
         }
+        StartCoroutine(InvulnerableTime());
 
+    }
+
+    IEnumerator InvulnerableTime()
+    {
+        hitBoxCollider.enabled = false;
+        yield return new WaitForSeconds(invulnerableTime);
+        hitBoxCollider.enabled = true;
     }
 
     void UpdateBombText()

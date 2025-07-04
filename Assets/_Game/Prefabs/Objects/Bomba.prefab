@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8599462655376979896}
   - component: {fileID: 8756465527613698406}
-  - component: {fileID: 2389357314069321467}
   - component: {fileID: 5152761928266948516}
+  - component: {fileID: 5706072795392568523}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -89,8 +89,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2389357314069321467
-CircleCollider2D:
+--- !u!114 &5152761928266948516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016581142906656384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76cdc5c4a3558d4c93c97c61d5e52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeForExplosion: 3
+  timeForDestructionAnimation: 1
+--- !u!61 &5706072795392568523
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,18 +138,14 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &5152761928266948516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4016581142906656384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76cdc5c4a3558d4c93c97c61d5e52db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeForExplosion: 3
-  timeForDestructionAnimation: 1
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.17}
+    newSize: {x: 0.15, y: 0.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.65, y: 0.65}
+  m_EdgeRadius: 0

@@ -37,7 +37,7 @@ public class Move : MonoBehaviour
 
         if (movementInput.x != 0 || movementInput.y != 0)
         {
-            Debug.Log("SE MUEVE...");
+            //Debug.Log("SE MUEVE...");
             isWalkin = true;
             animator.SetFloat("UltimoPosX", movementInput.x);
             animator.SetFloat("UltimoPosY", movementInput.y);

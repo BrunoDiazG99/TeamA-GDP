@@ -12,13 +12,13 @@ public class BombaScript : MonoBehaviour
 
 
     private Tilemap destructibles;
-    private CircleCollider2D explosionHitBox;
+    private BoxCollider2D explosionHitBox;
 
     private void Awake()
     {
         destructibles = GameObject.FindGameObjectWithTag("DestructibleTilemap").gameObject.GetComponent<Tilemap>();
 
-        explosionHitBox = gameObject.GetComponent<CircleCollider2D>();
+        explosionHitBox = gameObject.GetComponent<BoxCollider2D>();
         explosionHitBox.enabled = false;
     }
     private void Start()
@@ -30,7 +30,7 @@ public class BombaScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timeForExplosion);
         explosionHitBox.enabled=true;
-
+        AudioManager.instance.StopSound("sf_bomb");
         // set explosion animation 
         yield return new WaitForSeconds(timeForDestructionAnimation);
         Destroy(gameObject);

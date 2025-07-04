@@ -7,6 +7,8 @@ TagManager:
   - Logic
   - GameOverScreen
   - DestructibleTilemap
+  - PlayerHealth
+  - Enemy
   layers:
   - Default
   - TransparentFX

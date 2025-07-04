@@ -26,18 +26,25 @@ public class EnemyAI : MonoBehaviour
     float health;
 
     [SerializeField]
-    float followPlayerRadius = 10f; // Minimum radius for Enemy to follow player
+    float followPlayerRadius; // Minimum radius for Enemy to follow player
+
+    [SerializeField]
+    float attackPlayerRadius; // Minimum radius for Enemy to follow player
 
     Vector3 startingPosition;
     Vector3 roamPosition;
 
     [SerializeField]
-    float attackCooldown = 5f;
+    float attackCooldown;
 
     [SerializeField]
-    float attackAnimationDuration = 0.4f;
-    //Animator animator;
-    bool facingLeft;
+    float attackAnimationDuration;
+
+    [SerializeField]
+    BoxCollider2D hitBoxCollider;
+
+    [SerializeField]
+    float invulnerableTime;
 
     EnemyState currentState;
 
@@ -59,7 +66,6 @@ public class EnemyAI : MonoBehaviour
 
     void Awake()
     {
-        facingLeft = false;
         attackHitBox.SetActive(false);
        
         agent = GetComponent<NavMeshAgent>();
@@ -90,7 +96,6 @@ public class EnemyAI : MonoBehaviour
 
         if (currentDistanceToPlayer < followPlayerRadius)
         {
-
             if (currentState != EnemyState.attack && currentState != EnemyState.stagger && currentState == EnemyState.idle)
             {
                 agent.SetDestination(playerTarget.position);
@@ -98,7 +103,10 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            agent.SetDestination(roamPosition);
+            if (currentState != EnemyState.attack && currentState != EnemyState.stagger && currentState == EnemyState.idle)
+            {
+                agent.SetDestination(roamPosition);
+            }
         }
 
         float reachedPositionDistance = 1.5f;
@@ -107,6 +115,28 @@ public class EnemyAI : MonoBehaviour
             roamPosition = GetRoamPosition();
         }
 
+    }
+
+    public void TakeDamage()
+    {
+
+        AudioManager.instance.PlaySound("sf_enemy_dmg");
+        health -= 1;
+        if (health == 0)
+        {
+            // game over
+            Destroy(gameObject);
+        }
+
+        StartCoroutine(InvulnerableTime());
+
+    }
+
+    IEnumerator InvulnerableTime()
+    {
+        hitBoxCollider.enabled = false;
+        yield return new WaitForSeconds(invulnerableTime);
+        hitBoxCollider.enabled = true;
     }
 
     IEnumerator GenerateAttack()
@@ -120,11 +150,14 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator EnemyAttack()
     {
+        float currentDistanceToPlayer;
         while (true)
         {
 
-            //Debug.Log("waiting 5 seconds");
+            Debug.Log("waiting 5 seconds");
             yield return new WaitForSeconds(attackCooldown);
+            currentDistanceToPlayer = Vector3.Distance(transform.position, playerTarget.position);
+            if (currentDistanceToPlayer > attackPlayerRadius) continue;
             agent.isStopped = true;
             if (currentState != EnemyState.attack && currentState != EnemyState.stagger)
             {

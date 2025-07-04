@@ -20,6 +20,12 @@ public class GameEvents : MonoBehaviour
         onBombPickup?.Invoke();
     }
 
+    public event Action onHeartPickup;
+    public void HeartPickup()
+    {
+        onHeartPickup?.Invoke();
+    }
+
 
     // Player Events
 
@@ -27,6 +33,20 @@ public class GameEvents : MonoBehaviour
     public void EnemyDamage()
     {
         onEnemyDamage?.Invoke();
+    }
+
+    // Game Events
+
+    public event Action onGameOver;
+    public void GameOver()
+    {
+        onGameOver?.Invoke();
+    }
+
+    public event Action onGameFinish;
+    public void GameFinish()
+    {
+        onGameFinish?.Invoke();
     }
 
 }
