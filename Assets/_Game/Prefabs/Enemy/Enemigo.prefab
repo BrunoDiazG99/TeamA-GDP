@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.009850502, y: 0.067323685}
+  m_Offset: {x: 0.013158321, y: -0.0054531097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8191223, y: 2.6285133}
+  m_Size: {x: 0.8862772, y: 1.2127037}
   m_EdgeRadius: 0
 --- !u!1 &5887150766051691132
 GameObject:
@@ -145,7 +145,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.031228542, y: -1.05127}
+  m_Offset: {x: 0.0014567375, y: -0.52861214}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4803972, y: 1.1835241}
+  m_Size: {x: 1.2961473, y: 0.68071365}
   m_EdgeRadius: 0
 --- !u!114 &7227709786601419793
 MonoBehaviour:
@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 532706872784160210}
   - component: {fileID: 7954234762671417273}
   - component: {fileID: -3999105219393725381}
+  - component: {fileID: 7069993376267648226}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -252,7 +253,7 @@ SpriteRenderer:
   m_SortingLayerID: 1961824649
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8700586648625052212, guid: 51bcf4237e29e5d45bb7af91973b495d, type: 3}
+  m_Sprite: {fileID: 6775377089526537220, guid: 4db7daae62a7c8e4bbe6ee54a629ca7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -346,17 +347,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.002028942, y: -0.2678089}
+  m_Offset: {x: 0.011203289, y: -0.18511009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 2.82}
+    oldSize: {x: 0.9, y: 1.26}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5588694, y: 1.1401253}
+  m_Size: {x: 0.7517271, y: 0.48514938}
   m_EdgeRadius: 0
 --- !u!195 &7954234762671417273
 NavMeshAgent:
@@ -477,3 +478,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7069993376267648226
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503469773577896784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 38f7ae8f5bd3e3c47b1bb51f19aa803e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
