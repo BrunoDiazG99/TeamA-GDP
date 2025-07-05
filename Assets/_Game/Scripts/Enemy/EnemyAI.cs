@@ -11,6 +11,8 @@ public enum EnemyState
 
 public class EnemyAI : MonoBehaviour
 {
+    private Animator animator;
+
     [SerializeField]
     Transform playerTarget;
 
@@ -67,12 +69,11 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         attackHitBox.SetActive(false);
-       
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        
-        //animator = GetComponent<Animator>();
+
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -86,10 +87,10 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //facingLeft = roamPosition.x - transform.position.x < 0 ? true : false;
-        //animator.SetBool("moving", true);
-        //animator.SetBool("facingLeft", facingLeft);
-        //animator.SetFloat("movX", facingLeft ? -1 : 1);
+        /* bool facingLeft = roamPosition.x - transform.position.x < 0 ? true : false;
+        animator.SetBool("moving", true);
+        animator.SetBool("facingLeft", facingLeft);
+        animator.SetFloat("movX", facingLeft ? -1 : 1); */
 
 
         float currentDistanceToPlayer = Vector3.Distance(transform.position, playerTarget.position);
@@ -115,6 +116,16 @@ public class EnemyAI : MonoBehaviour
             roamPosition = GetRoamPosition();
         }
 
+        Vector3 movementInput = agent.velocity; //identificar movimiento
+        // Dar animación
+        animator.SetFloat("movX", movementInput.x);
+        animator.SetFloat("moveY", movementInput.y);
+        if (movementInput.x != 0 || movementInput.y != 0)
+        {
+            Vector2 dir = new Vector2(movementInput.x, movementInput.y).normalized;
+            animator.SetFloat("posX", dir.x);
+            animator.SetFloat("posY", dir.y);
+        }
     }
 
     public void TakeDamage()
