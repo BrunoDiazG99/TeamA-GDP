@@ -11,6 +11,7 @@ public class BombPickup : MonoBehaviour
             Debug.Log("This is a player, giving bomb");
 
             GameEvents.current.BombPickup();
+            AudioManager.instance.PlaySound("sfx_pickup");
 
             Destroy(gameObject);
 

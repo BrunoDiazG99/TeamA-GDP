@@ -10,6 +10,8 @@ public class BombaScript : MonoBehaviour
     public float timeForExplosion;
     public float timeForDestructionAnimation;
 
+    [SerializeField]
+    SpriteRenderer fireSprite;
 
     private Tilemap destructibles;
     private BoxCollider2D explosionHitBox;
@@ -31,7 +33,7 @@ public class BombaScript : MonoBehaviour
         yield return new WaitForSeconds(timeForExplosion);
         explosionHitBox.enabled=true;
         AudioManager.instance.StopSound("sf_bomb");
-        // set explosion animation 
+        fireSprite.enabled = true;
         yield return new WaitForSeconds(timeForDestructionAnimation);
         Destroy(gameObject);
     }

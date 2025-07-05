@@ -1344,13 +1344,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_37
+      name: finish-4
       rect:
         serializedVersion: 2
-        x: 304
+        x: 358
         y: 261
-        width: 10
-        height: 17
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1366,13 +1366,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_38
+      name: finish-5
       rect:
         serializedVersion: 2
-        x: 358
+        x: 390
         y: 261
         width: 20
-        height: 18
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1388,10 +1388,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_39
+      name: finish-8
       rect:
         serializedVersion: 2
-        x: 390
+        x: 454
         y: 261
         width: 20
         height: 19
@@ -1410,7 +1410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: finish
+      name: finish-7
       rect:
         serializedVersion: 2
         x: 422
@@ -1427,28 +1427,6 @@ TextureImporter:
       bones: []
       spriteID: 9b74a56fc2ef8aa90800000000000000
       internalID: -7302307326716131399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objects_41
-      rect:
-        serializedVersion: 2
-        x: 454
-        y: 261
-        width: 52
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c799cbc265dca03f0800000000000000
-      internalID: -933708202724517508
       vertices: []
       indices: 
       edges: []
@@ -1608,7 +1586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_52
+      name: fire
       rect:
         serializedVersion: 2
         x: 160
@@ -1691,72 +1669,6 @@ TextureImporter:
       bones: []
       spriteID: ccf84e7261a448c00800000000000000
       internalID: 901927284399968204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objects_56
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 234
-        width: 41
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d9565722825aef80800000000000000
-      internalID: -8076552262776366635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objects_57
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 261
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 287eaaa3ad58c77e0800000000000000
-      internalID: -1766389781502433406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objects_58
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 261
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 269af3a56fc70e270800000000000000
-      internalID: 8277753512624892258
       vertices: []
       indices: 
       edges: []
@@ -3609,6 +3521,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: finish-1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 261
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcb1f34370f59448ac099248e43b18f
+      internalID: 991847949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finish-2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 261
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995c1570b3ad4794586e599945d9afd4
+      internalID: 1624469587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finish-3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 261
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d36c359722ea143bd34ff544b0315f
+      internalID: -39084739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finish-9
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 261
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c3fa2b45194fa498240503810e4691
+      internalID: -688257195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -3627,7 +3627,15 @@ TextureImporter:
     nameFileIdTable:
       book: 6639657697291588988
       empty-heart: -9053378900703536071
-      finish: -7302307326716131399
+      finish-1: 991847949
+      finish-2: 1624469587
+      finish-3: -39084739
+      finish-4: 1460043806165005221
+      finish-5: 2727136117312835427
+      finish-7: -7302307326716131399
+      finish-8: 7564501798177618812
+      finish-9: -688257195
+      fire: -6188367394728635080
       full-heart: -4430392651179603617
       heart-obj-1: -5884511041189993977
       heart-obj-2: -3709571434675093295
@@ -3703,9 +3711,6 @@ TextureImporter:
       objects_34: -5884573130030058871
       objects_35: 5898155415433455342
       objects_36: 4545352612990403588
-      objects_37: 1460043806165005221
-      objects_38: 2727136117312835427
-      objects_39: 7564501798177618812
       objects_4: 2654447934904345190
       objects_41: -933708202724517508
       objects_46: -857223443614927429
@@ -3715,7 +3720,6 @@ TextureImporter:
       objects_5: -3276687688264177478
       objects_50: 138822527552902627
       objects_51: -2336223751096622429
-      objects_52: -6188367394728635080
       objects_53: 6465271316976419069
       objects_54: -5262628193677242302
       objects_55: 901927284399968204

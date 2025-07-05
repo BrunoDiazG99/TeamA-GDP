@@ -21,6 +21,7 @@ public class HeartPickup : MonoBehaviour
             if (hasFullHealth) return;
 
             GameEvents.current.HeartPickup();
+            AudioManager.instance.PlaySound("sfx_pickup");
 
             Destroy(gameObject);
 

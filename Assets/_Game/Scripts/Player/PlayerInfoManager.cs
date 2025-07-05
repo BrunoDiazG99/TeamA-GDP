@@ -112,6 +112,7 @@ public class PlayerInfoManager : MonoBehaviour
         {
             // game over
             Debug.Log("Game should end");
+            AudioManager.instance.PlaySound("sfx_death");
             GameEvents.current.GameOver();
         }
         StartCoroutine(InvulnerableTime());
