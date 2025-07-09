@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
             Debug.Log("Game finished");
 
             GameEvents.current.GameFinish();
+            AudioManager.instance.StopSound("GameTrack");
 
         }
     }

@@ -31,11 +31,13 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
+        AudioManager.instance.PlaySound("sf_click");
         Application.Quit();
     }
 
     public void ReturnToMain()
     {
+        AudioManager.instance.PlaySound("sf_click");
         optionMenu.SetActive(false);
         mainMenu.SetActive(true);
 
@@ -43,17 +45,22 @@ public class MainMenu : MonoBehaviour
 
     public void ShowOptions()
     {
+        AudioManager.instance.PlaySound("sf_click");
         mainMenu.SetActive(false);
         optionMenu.SetActive(true);
     }
 
-    private void ShowLoading() { 
+    private void ShowLoading() {
+        AudioManager.instance.PlaySound("sf_click");
         mainMenu.SetActive(false);
         loadingMenu.SetActive(true);
     
     }
 
-    public void PlayGame() { StartCoroutine(PlayGameRoutine()); }
+    public void PlayGame() {
+        AudioManager.instance.PlaySound("sf_click"); 
+        StartCoroutine(PlayGameRoutine()); 
+    }
     private IEnumerator PlayGameRoutine()
     {
         ShowLoading();

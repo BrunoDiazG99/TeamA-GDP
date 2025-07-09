@@ -32,7 +32,7 @@ public class BombaScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timeForExplosion);
         explosionHitBox.enabled=true;
-        AudioManager.instance.StopSound("sf_bomb");
+        AudioManager.instance.PlaySound("sf_bomb");
         fireSprite.enabled = true;
         yield return new WaitForSeconds(timeForDestructionAnimation);
         Destroy(gameObject);

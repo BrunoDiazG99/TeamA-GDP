@@ -57,3 +57,93 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: -5352967773100596138, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
     source: {fileID: 0}
+  - name: GameTrack
+    clip: {fileID: 8300000, guid: c319c54ab2b82be4c98b2df0a56e41f8, type: 3}
+    volume: 0.5
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: -5352967773100596138, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_bomb
+    clip: {fileID: 8300000, guid: 8703350d3bcb4234da901e6b3111b8a3, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_walk
+    clip: {fileID: 8300000, guid: 23a60f11f3006f54d94cc29e17799a3f, type: 3}
+    volume: 0.599
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_enemy
+    clip: {fileID: 8300000, guid: 91c7be73354f9b046a98cce172063a13, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_enemy_dmg
+    clip: {fileID: 8300000, guid: aea35e5c61a3e814e8c586b11fb3b578, type: 3}
+    volume: 0.4
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_pickaxe
+    clip: {fileID: 8300000, guid: 6cbd546566e71c642be102b81f4a43f5, type: 3}
+    volume: 0.533
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_damage
+    clip: {fileID: 8300000, guid: abe8202e9894aba42809363000ac4bf8, type: 3}
+    volume: 0.4
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_death
+    clip: {fileID: 8300000, guid: 604cbccd94d709048aefaf5461276ffa, type: 3}
+    volume: 0.781
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_pickup
+    clip: {fileID: 8300000, guid: 59a0971574fbfb44299307686ac37102, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
+  - name: sf_click
+    clip: {fileID: 8300000, guid: da6afba0c590e6249a60459606bdf27f, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
