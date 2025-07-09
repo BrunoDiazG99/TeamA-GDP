@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Attacking Player");
+            //Debug.Log("Attacking Player");
             GameEvents.current.EnemyDamage();
         }
     }

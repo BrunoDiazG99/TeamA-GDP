@@ -117,15 +117,23 @@ public class EnemyAI : MonoBehaviour
         }
 
         Vector3 movementInput = agent.velocity; //identificar movimiento
+        float speed = movementInput.magnitude;
         // Dar animación
+        animator.SetFloat("speed", speed);
         animator.SetFloat("movX", movementInput.x);
         animator.SetFloat("moveY", movementInput.y);
+
         if (movementInput.x != 0 || movementInput.y != 0)
         {
             Vector2 dir = new Vector2(movementInput.x, movementInput.y).normalized;
             animator.SetFloat("posX", dir.x);
             animator.SetFloat("posY", dir.y);
         }
+        /* if (currentState == EnemyState.attack)
+        {
+            Debug.Log("Disparando trigger de ataque");
+            animator.SetTrigger("attack");
+        } */
     }
 
     public void TakeDamage()
@@ -133,6 +141,7 @@ public class EnemyAI : MonoBehaviour
 
         AudioManager.instance.PlaySound("sf_enemy_dmg");
         health -= 1;
+        animator.SetTrigger("hit");
         if (health == 0)
         {
             // game over
@@ -176,7 +185,7 @@ public class EnemyAI : MonoBehaviour
                 //animator.SetBool("moving", false);
                 //animator.SetBool("attacking", true);
                 currentState = EnemyState.attack;
-
+                animator.SetTrigger("attack");
                 //Debug.Log("starting attack");
                 StartCoroutine(GenerateAttack());
                 //Debug.Log("Finishing attack");

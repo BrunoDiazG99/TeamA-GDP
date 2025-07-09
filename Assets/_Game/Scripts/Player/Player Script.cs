@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         Movimiento();
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))//Cuando se presiona el botton "R"
         {
             animator.SetTrigger("Atacar");
         }
