@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UiManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class UiManager : MonoBehaviour
 
     public GameObject options;
     public GameObject menu;
-    
+
 
     private bool enabledMenu = false;
     private bool timeStopped = false;
@@ -39,7 +40,7 @@ public class UiManager : MonoBehaviour
         openMenuInput.started += TriggerMenuFromInput;
 
         GameEvents.current.onGameOver += GameOver;
-        GameEvents.current.onGameFinish+= FinishedGame;
+        GameEvents.current.onGameFinish += FinishedGame;
 
         AudioManager.instance.StopSound("MenuTrack");
         AudioManager.instance.PlaySound("GameTrack");
@@ -83,9 +84,16 @@ public class UiManager : MonoBehaviour
         menuCanvas.enabled = !enabledMenu;
         enabledMenu = !enabledMenu;
 
-        Time.timeScale = !timeStopped ? 1f : 0f;
         timeStopped = !timeStopped;
+        Time.timeScale = !timeStopped ? 1f : 0f;
 
+        // 🔧 Activa o desactiva el movimiento del jugador
+        if (playerMoveScript != null)
+        {
+            playerMoveScript.enabled = !timeStopped;
+        }
+        // 🔧 FIX: soltar el foco de la UI para que el input del jugador vuelva a funcionar
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void RestartLevel()

@@ -16,6 +16,12 @@ public class Move : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        if (rb2D.bodyType != RigidbodyType2D.Dynamic)
+        {
+            Debug.Log("Rigidbody estaba en modo incorrecto. Corrigiendo...");
+            rb2D.bodyType = RigidbodyType2D.Dynamic;
+        }
+
     }
 
     // Update is called once per frame
@@ -60,6 +66,7 @@ public class Move : MonoBehaviour
             Vector3 vector3 = Vector3.left * movementInput.x + Vector3.down * movementInput.y;
             Aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
         }
+        Debug.Log("Input: " + movementInput + " | BodyType: " + rb2D.bodyType + " | TimeScale: " + Time.timeScale);
     }
 
 
