@@ -87,23 +87,19 @@ public class UiManager : MonoBehaviour
         timeStopped = !timeStopped;
         Time.timeScale = !timeStopped ? 1f : 0f;
 
-        // 🔧 Activa o desactiva el movimiento del jugador
-        if (playerMoveScript != null)
-        {
-            playerMoveScript.enabled = !timeStopped;
-        }
-        // 🔧 FIX: soltar el foco de la UI para que el input del jugador vuelva a funcionar
-        EventSystem.current.SetSelectedGameObject(null);
+
     }
 
     public void RestartLevel()
     {
-        playerMoveScript.enabled = true;
+        //playerMoveScript.enabled = true;
+        Time.timeScale = 1f; // ✅ Asegura que el tiempo vuelva a correr
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 

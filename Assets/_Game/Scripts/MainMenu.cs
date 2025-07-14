@@ -50,16 +50,18 @@ public class MainMenu : MonoBehaviour
         optionMenu.SetActive(true);
     }
 
-    private void ShowLoading() {
+    private void ShowLoading()
+    {
         AudioManager.instance.PlaySound("sf_click");
         mainMenu.SetActive(false);
         loadingMenu.SetActive(true);
-    
+        loadingSlider.interactable = false;
     }
 
-    public void PlayGame() {
-        AudioManager.instance.PlaySound("sf_click"); 
-        StartCoroutine(PlayGameRoutine()); 
+    public void PlayGame()
+    {
+        AudioManager.instance.PlaySound("sf_click");
+        StartCoroutine(PlayGameRoutine());
     }
     private IEnumerator PlayGameRoutine()
     {
