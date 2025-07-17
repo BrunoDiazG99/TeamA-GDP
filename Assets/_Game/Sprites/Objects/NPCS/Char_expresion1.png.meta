@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0bfda1620b009f4aabee59add37ae83
+guid: 11890c2a93e9dbd4ab3008f819dad017
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8450920196473564987
-    second: MINER_BACK_WALK1_0
+      213: 3186127143255932547
+    second: Char_expresion1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MINER_BACK_WALK1_0
+      name: Char_expresion1_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 104
-        height: 122
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 17
+        y: 35
+        width: 92
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c0d4003bdc48ba80800000000000000
-      internalID: -8450920196473564987
+      spriteID: 38efff681c5673c20800000000000000
+      internalID: 3186127143255932547
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fffeb193be0f4384c8fb9be895181ff1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MINER_BACK_WALK1_0: -8450920196473564987
+      Char_expresion1_0: 3186127143255932547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

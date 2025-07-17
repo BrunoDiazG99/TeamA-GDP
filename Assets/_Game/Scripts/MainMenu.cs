@@ -67,7 +67,8 @@ public class MainMenu : MonoBehaviour
     {
         ShowLoading();
         yield return new WaitForSeconds(2f);
-        LoadLevel("TestingScene-bruno");
+        //LoadLevel("TestingScene-bruno");
+        LoadLevel("Tutorial");
     }
 
     public void LoadLevel(string sceneName)

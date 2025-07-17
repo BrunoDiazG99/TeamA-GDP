@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0bfda1620b009f4aabee59add37ae83
+guid: a9cb117878de3f44196d9814aef023c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8450920196473564987
-    second: MINER_BACK_WALK1_0
+      213: 8074025903351118529
+    second: CANGREJO DEAD_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MINER_BACK_WALK1_0
+      name: CANGREJO DEAD_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 12
         y: 4
-        width: 104
-        height: 122
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        width: 103
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c0d4003bdc48ba80800000000000000
-      internalID: -8450920196473564987
+      spriteID: 1cabb84f7c3bc0070800000000000000
+      internalID: 8074025903351118529
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fffeb193be0f4384c8fb9be895181ff1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MINER_BACK_WALK1_0: -8450920196473564987
+      CANGREJO DEAD_0: 8074025903351118529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

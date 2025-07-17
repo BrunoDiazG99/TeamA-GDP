@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0bfda1620b009f4aabee59add37ae83
+guid: 78fbf5d014b0c744cb596d88b110c410
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8450920196473564987
-    second: MINER_BACK_WALK1_0
+      213: -2334747519394535682
+    second: MINE_MAIL_FONDO_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MINER_BACK_WALK1_0
+      name: MINE_MAIL_FONDO_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 104
-        height: 122
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 22
+        y: 0
+        width: 1856
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c0d4003bdc48ba80800000000000000
-      internalID: -8450920196473564987
+      spriteID: ef6a34a408f499fd0800000000000000
+      internalID: -2334747519394535682
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fffeb193be0f4384c8fb9be895181ff1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MINER_BACK_WALK1_0: -8450920196473564987
+      MINE_MAIL_FONDO_0: -2334747519394535682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

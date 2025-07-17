@@ -65,9 +65,10 @@ public class EnemyAI : MonoBehaviour
 
         return startingPosition + randomDir;
     }
-
+    [SerializeField] private GameObject corpseObject;//Cadaver Objecto
     void Awake()
     {
+        corpseObject.SetActive(false);//Cadaver desactivado
         attackHitBox.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -144,6 +145,11 @@ public class EnemyAI : MonoBehaviour
         animator.SetTrigger("hit");
         if (health == 0)
         {
+            if (corpseObject != null)
+            {
+                corpseObject.SetActive(true); // 👁️ Mostrar sprite de cadáver
+                corpseObject.transform.SetParent(null); // 🔓 Lo suelta del enemigo para que no se destruya
+            }
             // game over
             Destroy(gameObject);
         }

@@ -31,7 +31,7 @@ public class BombaScript : MonoBehaviour
     private IEnumerator StartBombCountdown()
     {
         yield return new WaitForSeconds(timeForExplosion);
-        explosionHitBox.enabled=true;
+        explosionHitBox.enabled = true;
         AudioManager.instance.PlaySound("sf_bomb");
         fireSprite.enabled = true;
         yield return new WaitForSeconds(timeForDestructionAnimation);
@@ -56,7 +56,7 @@ public class BombaScript : MonoBehaviour
             Debug.Log("min: " + min);
             Debug.Log("max: " + max);
 
-            // Iteramos sobre todas las celdas en el área
+            // Iteramos sobre todas las celdas en el ï¿½rea
             for (int x = min.x; x <= max.x; x++)
             {
                 for (int y = min.y; y <= max.y; y++)
@@ -71,6 +71,11 @@ public class BombaScript : MonoBehaviour
                     }
                 }
             }
+        }
+        else if (collision.CompareTag("Enemy"))
+        {
+            AudioManager.instance.PlaySound("sf_enemy_dmg");
+            Destroy(collision.gameObject); // ðŸ’€ Destruye enemigo
         }
     }
 
