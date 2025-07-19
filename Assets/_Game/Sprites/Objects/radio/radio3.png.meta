@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: c20f73646b57d934db7bdc606d7c2004
+guid: 922df8fedb8bd074ba52eb55ba52df99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 269630970746453262
-    second: bomb-alt-2_0
+      213: -847543472396577717
+    second: radio3_0
+  - first:
+      213: -6391611248114375751
+    second: radio3_1
+  - first:
+      213: 1184565864790845867
+    second: radio3_2
+  - first:
+      213: 7693931523441952064
+    second: radio3_3
+  - first:
+      213: -2799739379402634082
+    second: radio3_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,27 +108,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bomb-alt-2_0
+      name: radio3_2
       rect:
         serializedVersion: 2
-        x: 41
+        x: 25
         y: 0
-        width: 46
-        height: 69
+        width: 66
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0d39c770fbedb300800000000000000
-      internalID: 269630970746453262
+      spriteID: ba969efb06c607010800000000000000
+      internalID: 1184565864790845867
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8e223704530e8f14285146c41bdc8cd8
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bomb-alt-2_0: 269630970746453262
+      radio3_0: -847543472396577717
+      radio3_1: -6391611248114375751
+      radio3_2: 1184565864790845867
+      radio3_3: 7693931523441952064
+      radio3_4: -2799739379402634082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

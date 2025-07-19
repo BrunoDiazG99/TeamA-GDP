@@ -9,6 +9,7 @@ public class Move : MonoBehaviour
     private Animator animator;
 
     public Transform Aim;
+    public Transform visualLuzAim;
     bool isWalkin = false;
 
 
@@ -65,6 +66,7 @@ public class Move : MonoBehaviour
         {
             Vector3 vector3 = Vector3.left * movementInput.x + Vector3.down * movementInput.y;
             Aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+            visualLuzAim.rotation = Quaternion.LookRotation(Vector3.forward, -vector3);
         }
         Debug.Log("Input: " + movementInput + " | BodyType: " + rb2D.bodyType + " | TimeScale: " + Time.timeScale);
     }

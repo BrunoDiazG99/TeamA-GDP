@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 6bc9573bed9e47543a88ade081c0dd4d
+guid: a4aa6446629d64e40ae87b5986c6e1dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8629412753075924905
-    second: bomb1_0
+      213: 6408689300346532185
+    second: radio2_0
+  - first:
+      213: 1890728630425231661
+    second: radio2_1
+  - first:
+      213: 557927087246825484
+    second: radio2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,27 +102,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bomb1_0
+      name: radio2_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 25
         y: 0
-        width: 46
-        height: 56
+        width: 66
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7501fa852da2e3880800000000000000
-      internalID: -8629412753075924905
+      spriteID: d21282ffba73d3a10800000000000000
+      internalID: 1890728630425231661
       vertices: []
       indices: 
       edges: []
@@ -125,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ef6c0666dbf7d2141a04dd953eaae670
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +152,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
-      bomb1_0: -8629412753075924905
+      radio2_0: 6408689300346532185
+      radio2_1: 1890728630425231661
+      radio2_2: 557927087246825484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

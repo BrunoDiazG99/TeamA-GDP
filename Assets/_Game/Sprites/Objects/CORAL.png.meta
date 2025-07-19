@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8aa353bd65eb9534cb20c41d27a7349f
+guid: a28a0955a6fbc60428db8f9a3ea100f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7489009585814028084
-    second: bomb2_0
+      213: -6304110059055957587
+    second: CORAL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bomb2_0
+      name: CORAL_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 0
-        width: 46
-        height: 56
+        x: 0
+        y: 14
+        width: 118
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc04f0ec571b11890800000000000000
-      internalID: -7489009585814028084
+      spriteID: da9b0094d4d4388a0800000000000000
+      internalID: -6304110059055957587
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bomb2_0: -7489009585814028084
+      CORAL_0: -6304110059055957587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

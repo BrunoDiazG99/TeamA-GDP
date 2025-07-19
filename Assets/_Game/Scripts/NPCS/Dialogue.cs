@@ -8,9 +8,16 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private AudioClip npcVoice;
     private bool didDialogueStart;
     private int lineIndex;//Que linea de dialogo se muestra
-    private float typingTime = 0.05f;
+    [SerializeField] private float typingTime;
+    private AudioSource audioSource;
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = npcVoice;
+    }
     void Awake()
     {
         dialogueMark.SetActive(false);
@@ -69,6 +76,7 @@ public class Dialogue : MonoBehaviour
         foreach (char car in dialogueLines[lineIndex])
         {
             dialogueText.text += car;//Concatenar caracteres;
+            audioSource.Play();
             yield return new WaitForSecondsRealtime(typingTime);
         }
     }
