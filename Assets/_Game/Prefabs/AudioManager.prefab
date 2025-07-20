@@ -147,3 +147,12 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
     source: {fileID: 0}
+  - name: sf_dialogue
+    clip: {fileID: 8300000, guid: d328490cc36af2448913f20bf90a34af, type: 3}
+    volume: 0.5
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 444772150226856058, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    source: {fileID: 0}
