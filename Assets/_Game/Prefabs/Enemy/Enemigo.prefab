@@ -312,7 +312,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.526, y: 40.864, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3886430005494851432}
@@ -390,13 +390,15 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   spriteRenderer: {fileID: 7707055199527747731}
   attackHitBox: {fileID: 5887150766051691132}
-  health: 2
+  health: 3
   followPlayerRadius: 8
   attackPlayerRadius: 4
   attackCooldown: 5
   attackAnimationDuration: 0.5
   hitBoxCollider: {fileID: 5323788599398824759}
   invulnerableTime: 1
+  spRender: {fileID: 7707055199527747731}
+  whiteShader: {fileID: 2100000, guid: ea75b035bcd4d4f418d4559854d47ffd, type: 2}
   corpseObject: {fileID: 5075416060209847024}
 --- !u!50 &8540242968092984169
 Rigidbody2D:

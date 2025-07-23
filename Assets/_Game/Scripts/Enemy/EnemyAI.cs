@@ -49,7 +49,10 @@ public class EnemyAI : MonoBehaviour
     float invulnerableTime;
 
     EnemyState currentState;
-
+    [SerializeField] private SpriteRenderer spRender;
+    [SerializeField] private Material whiteShader;
+    private Material materialOriginal;
+    [SerializeField] private GameObject corpseObject;//Cadaver Objecto
 
     static Vector3 GetRandomDir()
     {
@@ -65,7 +68,7 @@ public class EnemyAI : MonoBehaviour
 
         return startingPosition + randomDir;
     }
-    [SerializeField] private GameObject corpseObject;//Cadaver Objecto
+
     void Awake()
     {
         corpseObject.SetActive(false);//Cadaver desactivado
@@ -80,6 +83,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         StartCoroutine(EnemyAttack());
+        materialOriginal = spRender.material;//Guardar material original
         currentState = EnemyState.idle;
         startingPosition = transform.position;
         roamPosition = GetRoamPosition();
@@ -161,6 +165,13 @@ public class EnemyAI : MonoBehaviour
     IEnumerator InvulnerableTime()
     {
         hitBoxCollider.enabled = false;
+        for (int i = 0; i < 2; i++)
+        {
+            spRender.material = whiteShader;
+            yield return new WaitForSeconds(0.1f); // tiempo visible del blanco
+            spRender.material = materialOriginal;
+            yield return new WaitForSeconds(0.1f); // tiempo visible del normal
+        }
         yield return new WaitForSeconds(invulnerableTime);
         hitBoxCollider.enabled = true;
     }

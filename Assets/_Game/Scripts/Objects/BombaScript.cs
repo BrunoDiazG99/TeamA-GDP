@@ -76,6 +76,7 @@ public class BombaScript : MonoBehaviour
         {
             AudioManager.instance.PlaySound("sf_enemy_dmg");
             Destroy(collision.gameObject); // 💀 Destruye enemigo
+
         }
     }
 

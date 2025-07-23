@@ -4,14 +4,17 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     private bool alreadyTriggered = false;
-    [SerializeField] private string sceneToLoad; // 👈 Nombre de la escena a cargar
-    // Update is called once per frame
+    [SerializeField] private Transform teleportDestination; // 👈 posición a la que se moverá el jugador
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && !alreadyTriggered)
         {
-            SceneManager.LoadScene(sceneToLoad);
             alreadyTriggered = true;
+
+            // Teletransportar al jugador al nuevo punto
+            collision.transform.position = teleportDestination.position;
+
         }
     }
 }

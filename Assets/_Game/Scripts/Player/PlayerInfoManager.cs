@@ -31,18 +31,20 @@ public class PlayerInfoManager : MonoBehaviour
     [SerializeField]
     float invulnerableTime;
     BoxCollider2D hitBoxCollider;
-
+    [SerializeField] private SpriteRenderer spRender;
+    [SerializeField] private Material whiteShader;
+    private Material materialOriginal;
     private void Awake()
     {
         hitBoxCollider = gameObject.GetComponent<BoxCollider2D>();
         GameObject vidaInCanvas = GameObject.FindGameObjectWithTag("PlayerHealth").gameObject;
-        healthIcons  = vidaInCanvas.GetComponentsInChildren<Image>();
+        healthIcons = vidaInCanvas.GetComponentsInChildren<Image>();
 
     }
 
     void Start()
     {
-
+        materialOriginal = spRender.material;//Guardar material original
         placeBombAction = InputSystem.actions.FindAction("Interact");
 
         GameEvents.current.onBombPickup += BombPickedUp;
@@ -122,6 +124,13 @@ public class PlayerInfoManager : MonoBehaviour
     IEnumerator InvulnerableTime()
     {
         hitBoxCollider.enabled = false;
+        for (int i = 0; i < 2; i++)//Efecto Shader
+        {
+            spRender.material = whiteShader;
+            yield return new WaitForSeconds(0.1f); // tiempo visible del blanco
+            spRender.material = materialOriginal;
+            yield return new WaitForSeconds(0.1f); // tiempo visible del normal
+        }
         yield return new WaitForSeconds(invulnerableTime);
         hitBoxCollider.enabled = true;
     }
@@ -140,7 +149,7 @@ public class PlayerInfoManager : MonoBehaviour
 
     void PlaceBomb()
     {
-        if(numBombas >= 1)
+        if (numBombas >= 1)
         {
 
             Transform currentPosition = gameObject.transform;
