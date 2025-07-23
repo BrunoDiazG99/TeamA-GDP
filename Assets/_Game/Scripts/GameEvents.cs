@@ -35,6 +35,12 @@ public class GameEvents : MonoBehaviour
         onEnemyDamage?.Invoke();
     }
 
+    public event Action onMakeInvulnerable;
+    public void MakeInvulnerable()
+    {
+        onMakeInvulnerable?.Invoke();
+    }
+
     // Game Events
 
     public event Action onGameOver;
