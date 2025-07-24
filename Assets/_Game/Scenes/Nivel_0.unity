@@ -1186,6 +1186,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2990760198550378209, guid: fe611dd537156594e9b7920d0c8c7bcf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7098103429398256881, guid: fe611dd537156594e9b7920d0c8c7bcf, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1193,6 +1197,14 @@ PrefabInstance:
     - target: {fileID: 7343764757356791533, guid: fe611dd537156594e9b7920d0c8c7bcf, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356015353247702769, guid: fe611dd537156594e9b7920d0c8c7bcf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899886164598284950, guid: fe611dd537156594e9b7920d0c8c7bcf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -155510,8 +155522,8 @@ Camera:
   m_GameObject: {fileID: 1599475897}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.054901965, g: 0.03137255, b: 0.07450981, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
