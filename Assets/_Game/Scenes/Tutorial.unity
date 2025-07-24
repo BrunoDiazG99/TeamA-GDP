@@ -1425,14 +1425,14 @@ PrefabInstance:
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 397617641}
+      objectReference: {fileID: 1685649690}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 397617642}
+      objectReference: {fileID: 1685649691}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: En serio...
+      value: '???: En serio...'
       objectReference: {fileID: 0}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
@@ -1552,22 +1552,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d228ee6f3c46670458ec8b0ba42edc7f, type: 3}
---- !u!114 &397617641 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3616137724997000283, guid: d228ee6f3c46670458ec8b0ba42edc7f, type: 3}
-  m_PrefabInstance: {fileID: 397617640}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &397617642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5119542630103537816, guid: d228ee6f3c46670458ec8b0ba42edc7f, type: 3}
-  m_PrefabInstance: {fileID: 397617640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413666181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,17 +1736,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &433719514 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3616137724997000283, guid: d228ee6f3c46670458ec8b0ba42edc7f, type: 3}
-  m_PrefabInstance: {fileID: 9140186172295982853}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &435831307
 GameObject:
   m_ObjectHideFlags: 0
@@ -45603,11 +45576,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &889649422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5119542630103537816, guid: d228ee6f3c46670458ec8b0ba42edc7f, type: 3}
-  m_PrefabInstance: {fileID: 9140186172295982853}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &889858713
 GameObject:
   m_ObjectHideFlags: 0
@@ -49491,11 +49459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae68629aeccb4ae458dba4fe52889ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 889649422}
-  dialogueText: {fileID: 433719514}
+  dialoguePanel: {fileID: 1685649691}
+  dialogueText: {fileID: 1685649690}
   dialogueLines:
-  - Bueno veo que estas listo
-  - ' puedes ir de frente y recoger las bombas'
+  - 'Capataz: Bueno veo que estas listo'
+  - puedes ir de frente y recoger las bombas
   - ' para ya empezar con la escabacion...'
   npcVoice: {fileID: 8300000, guid: d328490cc36af2448913f20bf90a34af, type: 3}
 --- !u!82 &1619460763
@@ -49928,11 +49896,11 @@ PrefabInstance:
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 397617641}
+      objectReference: {fileID: 1685649690}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 397617642}
+      objectReference: {fileID: 1685649691}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 2
@@ -50239,14 +50207,18 @@ PrefabInstance:
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 433719514}
+      objectReference: {fileID: 1685649690}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 889649422}
+      objectReference: {fileID: 1685649691}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Capataz: Nuevo en estas minas...'
       objectReference: {fileID: 0}
     - target: {fileID: 7937614872070986691, guid: f19968015d70e9b46b987a5bfe1dd7cc, type: 3}
       propertyPath: 'dialogueLines.Array.data[3]'
