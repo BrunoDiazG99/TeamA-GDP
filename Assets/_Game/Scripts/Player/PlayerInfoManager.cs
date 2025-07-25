@@ -46,10 +46,12 @@ public class PlayerInfoManager : MonoBehaviour
     {
         materialOriginal = spRender.material;//Guardar material original
         placeBombAction = InputSystem.actions.FindAction("Interact");
+        UpdateHealth();
 
         GameEvents.current.onBombPickup += BombPickedUp;
         GameEvents.current.onHeartPickup += HeartPickup;
         GameEvents.current.onEnemyDamage += TakeDamage;
+        GameEvents.current.onMakeInvulnerable += MakeInvulnerable;
     }
 
     private void Update()
@@ -104,10 +106,16 @@ public class PlayerInfoManager : MonoBehaviour
         }
     }
 
+    public void MakeInvulnerable()
+    {
+        StartCoroutine(InvulnerableTime());
+    }
+
     void TakeDamage()
     {
 
         AudioManager.instance.PlaySound("sf_damage");
+        Debug.Log("Taking damage");
         health -= 1;
         UpdateHealth();
         if (health == 0)
@@ -117,7 +125,6 @@ public class PlayerInfoManager : MonoBehaviour
             AudioManager.instance.PlaySound("sfx_death");
             GameEvents.current.GameOver();
         }
-        StartCoroutine(InvulnerableTime());
 
     }
 

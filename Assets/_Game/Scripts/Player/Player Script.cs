@@ -68,7 +68,7 @@ public class Move : MonoBehaviour
             Aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
             visualLuzAim.rotation = Quaternion.LookRotation(Vector3.forward, -vector3);
         }
-        Debug.Log("Input: " + movementInput + " | BodyType: " + rb2D.bodyType + " | TimeScale: " + Time.timeScale);
+        //Debug.Log("Input: " + movementInput + " | BodyType: " + rb2D.bodyType + " | TimeScale: " + Time.timeScale);
     }
 
 
