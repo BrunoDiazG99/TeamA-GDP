@@ -45794,6 +45794,30 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c319c54ab2b82be4c98b2df0a56e41f8, type: 3}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.name
+      value: GameTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.mixerGroup
+      value: 
+      objectReference: {fileID: -5352967773100596138, guid: 34f820aaa3d7be94094e651fc1c17de9, type: 2}
+    - target: {fileID: 5103166586926549988, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
+      propertyPath: trackToPlay.pitchVariance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6993255255656045416, guid: 9e6ac9b72dea92c47ad3d605b3a07eac, type: 3}
       propertyPath: m_Pivot.x
       value: 0

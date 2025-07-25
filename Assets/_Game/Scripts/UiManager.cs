@@ -10,6 +10,7 @@ public class UiManager : MonoBehaviour
     public Canvas gameOverScreen;
     public Canvas gameFinishedScreen;
 
+    public Sound trackToPlay;
 
     public GameObject options;
     public GameObject menu;
@@ -42,9 +43,14 @@ public class UiManager : MonoBehaviour
         GameEvents.current.onGameOver += GameOver;
         GameEvents.current.onGameFinish += FinishedGame;
 
-        AudioManager.instance.StopSound("MenuTrack");
-        AudioManager.instance.PlaySound("GameTrack");
+        StartAudioTrackOfLevel();
 
+    }
+
+    void StartAudioTrackOfLevel()
+    {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.PlaySound(trackToPlay.name);
     }
 
     void StopTime()
@@ -68,12 +74,14 @@ public class UiManager : MonoBehaviour
 
     public void OpenOptions()
     {
+        AudioManager.instance.PlaySound("sf_click");
         menu.SetActive(false);
         options.SetActive(true);
     }
 
     public void ReturnFromOptions()
     {
+        AudioManager.instance.PlaySound("sf_click");
         options.SetActive(false);
         menu.SetActive(true);
     }
@@ -81,6 +89,7 @@ public class UiManager : MonoBehaviour
     public void TriggerMenu()
     {
 
+        AudioManager.instance.PlaySound("sf_click");
         menuCanvas.enabled = !enabledMenu;
         enabledMenu = !enabledMenu;
 
@@ -93,12 +102,14 @@ public class UiManager : MonoBehaviour
     public void RestartLevel()
     {
         //playerMoveScript.enabled = true;
+        AudioManager.instance.PlaySound("sf_click");
         Time.timeScale = 1f; // ✅ Asegura que el tiempo vuelva a correr
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()
     {
+        AudioManager.instance.PlaySound("sf_click");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }

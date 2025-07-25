@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -64,6 +65,26 @@ public class AudioManager : MonoBehaviour
         s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
         s.source.Play();
+    }
+
+    public void StopAll()
+    {
+        // Find all AudioSources routed to the target group
+        List<AudioSource> audioSources = new List<AudioSource>();
+        AudioSource[] allAudioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        foreach (AudioSource source in allAudioSources)
+        {
+            if (source.outputAudioMixerGroup == background)
+            {
+                audioSources.Add(source);
+            }
+        }
+
+        // Stop all found AudioSources
+        foreach (AudioSource source in audioSources)
+        {
+            source.Stop();
+        }
     }
 
     public void StopSound(string sound)
